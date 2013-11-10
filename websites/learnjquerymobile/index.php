@@ -1,3 +1,11 @@
+<?php
+/**
+@company self
+@author Raymond Byczko
+@start_date 2013-11
+@work_history 2013-11-10 RByczko, Added several CSS3 gradients.
+*/
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -14,6 +22,33 @@
 	.centerm {margin-left:auto; margin-right:auto;}
 	.centertwo {position: static;}
 	.centertwoo {}
+	.blueradial {
+		background:-webkit-radial-gradient(blue, black);
+		height:50px;
+		width:100%;
+	}
+	.blackstripe {
+		background:black;
+		height:50px;
+		width:100%;
+	}
+	@-webkit-keyframes growbarrier {
+		0% { height: 50px; }
+		100% { height: 100px; }
+	}
+	@-webkit-keyframes thinblack {
+		0% { height: 50px; }
+		100% { height: 0px; }
+	}
+	#blueradial_id {
+		-webkit-animation-name: growbarrier;
+		-webkit-animation-duration: 4s;
+	}
+	#cthinblack_id {
+		-webkit-animation-name: thinblack;
+		-webkit-animation-duration: 4s;
+	}
+		
 	</style>
 </head>
 <body>
@@ -147,6 +182,8 @@
 				<a href="#cssreflection" data-role="button">Text Reflection</a>
 				<a href="#imagereflection" data-role="button">Img Reflection</a>
 				<a href="#riverreflection" data-role="button">Rvr Reflection</a>
+				<a href="#blueradial" data-role="button">Blue Radial</a>
+				<a href="#thebarrier" data-role="button">Barrier</a>
 			</div>
 		</div>
 		<div data-role="collapsible" data-collapsed="true">
@@ -217,6 +254,51 @@
 		</div>
 		<img  style="display: block; -webkit-box-reflect: below 0px;" src="/images/river01.JPG" />
 		<img  style="opacity:0.50; display: block" src="/images/blue01.JPG" />
+	</div>
+	<div data-role="footer" data-position="fixed" position="fixed">
+		<a href="#index">Home</a>
+		<span>copyright Raymond Byczko 2013</span>
+	</div>
+</div>
+<div data-role="page" id="blueradial">
+	<div data-role="header" data-position="fixed">
+		<a href="#settings">Settings</a>
+		<h1>CSS3: Blue Radial</h1>
+	</div>
+	<div data-role="content">
+		<div data-role="controlgroup">
+			<a href="#fishing" data-role="button">Fishing</a>
+			<a href="#astronomy" data-role="button">Astronomy</a>
+		</div>
+		<div class="blueradial">
+		</div>
+	</div>
+	<div data-role="footer" data-position="fixed" position="fixed">
+		<a href="#index">Home</a>
+		<span>copyright Raymond Byczko 2013</span>
+	</div>
+</div>
+<div data-role="page" id="thebarrier">
+	<div data-role="header" data-position="fixed">
+		<a href="#settings">Settings</a>
+		<h1>CSS3: The Barrier</h1>
+	</div>
+	<div data-role="content">
+		<div data-role="controlgroup">
+			<a href="#fishing" data-role="button">Fishing</a>
+			<a href="#astronomy" data-role="button">Astronomy</a>
+		</div>
+
+		<div class="blackstripe">
+		</div>
+		<div class="blueradial" id="blueradial_id">
+		</div>
+		<div class="blackstripe" id="cthinblack_id">
+		</div>
+		<div class="blackstripe">
+		</div>
+		<div class="blackstripe">
+		</div>
 	</div>
 	<div data-role="footer" data-position="fixed" position="fixed">
 		<a href="#index">Home</a>
