@@ -14,7 +14,7 @@
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.css" />
 	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
 	<script type="text/javascript" src="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.js"></script>
-	<meta name="viewport" content="widht=device-width, initial-scale=1, user-scalable=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 	<style>
 	img.resized {width:100%; }
 	img.resized50 {width:50%;}
@@ -26,6 +26,16 @@
 		background:-webkit-radial-gradient(blue, black);
 		height:50px;
 		width:100%;
+	}
+	.bluesliver {
+		background:-webkit-radial-gradient(blue, black);
+		height:8px;
+		width:10%;
+	}
+	.blacksliver {
+		background:black;
+		height:8px;
+		width:90%;
 	}
 	.blackstripe {
 		background:black;
@@ -42,11 +52,27 @@
 	}
 	#blueradial_id {
 		-webkit-animation-name: growbarrier;
-		-webkit-animation-duration: 4s;
+		-webkit-animation-duration: 8s;
 	}
 	#cthinblack_id {
 		-webkit-animation-name: thinblack;
-		-webkit-animation-duration: 4s;
+		-webkit-animation-duration: 8s;
+	}
+	@-webkit-keyframes growbluesliver {
+		0% { height: 8px; width: 10%;}
+		100% { height: 15px; width: 50% }
+	}
+	@-webkit-keyframes shrinkblacksliver {
+		0% { height: 8px; width: 90%;}
+		100% { height: 15px; width: 50% }
+	}
+	#bluesliver_id {
+		-webkit-animation-name: growbluesliver;
+		-webkit-animation-duration: 8s;
+	}
+	#blacksliver_id {
+		-webkit-animation-name: shrinkblacksliver;
+		-webkit-animation-duration: 8s;
 	}
 		
 	</style>
@@ -184,6 +210,7 @@
 				<a href="#riverreflection" data-role="button">Rvr Reflection</a>
 				<a href="#blueradial" data-role="button">Blue Radial</a>
 				<a href="#thebarrier" data-role="button">Barrier</a>
+				<a href="#clouds" data-role="button">Clouds</a>
 			</div>
 		</div>
 		<div data-role="collapsible" data-collapsed="true">
@@ -292,6 +319,37 @@
 		<div class="blackstripe">
 		</div>
 		<div class="blueradial" id="blueradial_id">
+		</div>
+		<div class="blackstripe" id="cthinblack_id">
+		</div>
+		<div class="blackstripe">
+		</div>
+		<div class="blackstripe">
+		</div>
+	</div>
+	<div data-role="footer" data-position="fixed" position="fixed">
+		<a href="#index">Home</a>
+		<span>copyright Raymond Byczko 2013</span>
+	</div>
+</div>
+<div data-role="page" id="clouds">
+	<div data-role="header" data-position="fixed">
+		<a href="#settings">Settings</a>
+		<h1>CSS3: Clouds</h1>
+	</div>
+	<div data-role="content">
+		<div data-role="controlgroup">
+			<a href="#fishing" data-role="button">Fishing</a>
+			<a href="#astronomy" data-role="button">Astronomy</a>
+		</div>
+
+		<div class="blackstripe">
+		</div>
+		<div class="blueradial" id="blueradial_id">
+		</div>
+		<div class="blacksliver" id="blacksliver_id" style="float: left">
+		</div>
+		<div class="bluesliver" id="bluesliver_id" style="float: left">
 		</div>
 		<div class="blackstripe" id="cthinblack_id">
 		</div>
