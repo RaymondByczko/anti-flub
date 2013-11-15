@@ -4,6 +4,12 @@
 @author Raymond Byczko
 @start_date 2013-11
 @work_history 2013-11-10 RByczko, Added several CSS3 gradients.
+@work_history 2013-11-13 RByczko, Added Lists selection.
+@work_history 2013-11-14 RByczko, Worked on Lists selection. Included poor
+layouts as example of what not to do.
+@work_history 2013-11-15 RByczko, Worked on Lists selection. Included thumbs
+for each selection.  Commented out what does not work well for future
+reference.
 */
 ?>
 <!DOCTYPE html>
@@ -88,6 +94,7 @@
 	<a href="#fishing" data-role="button">Fishing</a>
 	<a href="#astronomy" data-role="button">Astronomy</a>
 	<a href="#cthree" data-role="button">CSS3</a>
+	<a href="#lists" data-role="button">Lists</a>
 	</div>
 	<p>This is a JQueryMobile based website used
 	for learning.  It displays various technique as to
@@ -110,6 +117,7 @@
 	<div data-role="controlgroup">
 	<a href="#astronomy" data-role="button">Astronomy</a>
 	<a href="#cthree" data-role="button">CSS3</a>
+	<a href="#lists" data-role="button">Lists</a>
 	</div>
 	<img class="resized" src="/images/tuna01.JPG"/>
 	<div data-role="collapsible" data-collapsed="true">
@@ -159,6 +167,7 @@
 		<div data-role="controlgroup">
 		<a href="#fishing" data-role="button">Fishing</a>
 		<a href="#cthree" data-role="button">CSS3</a>
+		<a href="#lists" data-role="button">Lists</a>
 		</div>
 		<img class="resized" src="/images/moon01.JPG"/>
 		<div data-role="collapsible" data-collapsed="true">
@@ -200,6 +209,7 @@
 		<div data-role="controlgroup">
 			<a href="#fishing" data-role="button">Fishing</a>
 			<a href="#astronomy" data-role="button">Astronomy</a>
+			<a href="#lists" data-role="button">Lists</a>
 		</div>
 		<div data-role="collapsible" data-collapsed="true">
 			<h2>CSS Stuff here</h2>
@@ -237,6 +247,7 @@
 		<div data-role="controlgroup">
 			<a href="#fishing" data-role="button">Fishing</a>
 			<a href="#astronomy" data-role="button">Astronomy</a>
+			<a href="#lists" data-role="button">Lists</a>
 		</div>
 		<p style="-webkit-box-reflect: below;">
 		Reflected text
@@ -256,6 +267,7 @@
 		<div data-role="controlgroup">
 			<a href="#fishing" data-role="button">Fishing</a>
 			<a href="#astronomy" data-role="button">Astronomy</a>
+			<a href="#lists" data-role="button">Lists</a>
 		</div>
 		<div class="centerm">
 		<img  class="centertwoo" src="/images/breakfast01.JPG" style="-webkit-box-reflect: below 0px;"/>
@@ -278,6 +290,7 @@
 		<div data-role="controlgroup">
 			<a href="#fishing" data-role="button">Fishing</a>
 			<a href="#astronomy" data-role="button">Astronomy</a>
+			<a href="#lists" data-role="button">Lists</a>
 		</div>
 		<img  style="display: block; -webkit-box-reflect: below 0px;" src="/images/river01.JPG" />
 		<img  style="opacity:0.50; display: block" src="/images/blue01.JPG" />
@@ -296,6 +309,7 @@
 		<div data-role="controlgroup">
 			<a href="#fishing" data-role="button">Fishing</a>
 			<a href="#astronomy" data-role="button">Astronomy</a>
+			<a href="#lists" data-role="button">Lists</a>
 		</div>
 		<div class="blueradial">
 		</div>
@@ -314,6 +328,7 @@
 		<div data-role="controlgroup">
 			<a href="#fishing" data-role="button">Fishing</a>
 			<a href="#astronomy" data-role="button">Astronomy</a>
+			<a href="#lists" data-role="button">Lists</a>
 		</div>
 
 		<div class="blackstripe">
@@ -341,6 +356,7 @@
 		<div data-role="controlgroup">
 			<a href="#fishing" data-role="button">Fishing</a>
 			<a href="#astronomy" data-role="button">Astronomy</a>
+			<a href="#lists" data-role="button">Lists</a>
 		</div>
 
 		<div class="blackstripe">
@@ -357,6 +373,36 @@
 		</div>
 		<div class="blackstripe">
 		</div>
+	</div>
+	<div data-role="footer" data-position="fixed" position="fixed">
+		<a href="#index">Home</a>
+		<span>copyright Raymond Byczko 2013</span>
+	</div>
+</div>
+<div data-role="page" id="lists">
+	<div data-role="header" data-position="fixed">
+		<a href="#settings">Settings</a>
+		<h1>Lists: JQuMobile</h1>
+	</div>
+	<div data-role="content">
+		<div data-role="controlgroup" data-theme="b">
+			<a href="#fishing" data-role="button">Fishing</a>
+			<a href="#astronomy" data-role="button">Astronomy</a>
+			<a href="#cthree" data-role="button">CSS3</a>
+		</div>
+		<ul data-role="listview" data-inset="true" data-theme="b">
+			<!-- The following does not work. -->
+			<!--<li><img src="/listthumbs/rene_thumb.JPG"/><a href="#faire">RenFaire</a></li>-->
+			<!-- The following works fine. -->
+			<!--<li><a href="#snow">Let it snow</a></li>-->
+			<!-- The following works fine. -->
+			<!--<li><a href="#cigar">Pass me a cigar</a></li>-->
+			<!-- The following does not work. Layout problem. -->
+			<!--<li><img src="/listthumbs/rene_thumb.JPG"><a href="#faire2"></a></li>-->
+			<li><a href="#faire"><img src="/listthumbs/faire_thumb.JPG">Rene Faire</a></li>
+			<li><a href="#sculpture"><img src="/listthumbs/sculpture_thumb.JPG">Sculpture</a></li>
+			<li><a href="#stove"><img src="/listthumbs/stove_thumb.JPG">Camping Stove</a></li>
+		</ul>
 	</div>
 	<div data-role="footer" data-position="fixed" position="fixed">
 		<a href="#index">Home</a>
